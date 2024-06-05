@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela Profesional</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\Nueva carpeta\Proyecto_Final\css\principal.css">
+</head>
+<body>
+    <header>
+        <h1>COLEGIOS DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS DEL ESTADO DE MEXICO</h1>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item" onclick="showSection('inicio')">Inicio</li>
+                <li class="menu-item" onclick="showSection('nosotros')">Nosotros</li>
+                <li class="menu-item">Materias
+                    <ul class="submenu">
+                        <li onclick="showSection('calculo')">Cálculo Integral</li>
+                        <li onclick="showSection('ingles')">Inglés</li>
+                        <li onclick="showSection('ecologia')">Ecología</li>
+                        <li onclick="showSection('fisica')">Física</li>
+                        <li onclick="showSection('especialidad')">Especialidad</li>
+                    </ul>
+                </li>
+                <li class="menu-item" onclick="showSection('contacto')">Contacto</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="content-section">
+            <h2>Bienvenidos a nuestra Escuela Profesional</h2>
+            <p>Aquí podrás encontrar toda la información sobre nuestras materias y actividades.</p>
+        </section>
+        <section id="nosotros" class="content-section" style="display:none;">
+            <h2>Nosotros</h2>
+            <p>Información sobre nosotros.</p>
+        </section>
+        <section id="calculo" class="content-section" style="display:none;">
+            <h2>Cálculo Integral</h2>
+            <p>Contenido de Cálculo Integral.</p>
+        </section>
+        <section id="ingles" class="content-section" style="display:none;">
+            <h2>Inglés</h2>
+            <p>Contenido de Inglés.</p>
+        </section>
+        <section id="ecologia" class="content-section" style="display:none;">
+            <h2>Ecología</h2>
+            <p>Contenido de Ecología.</p>
+        </section>
+        <section id="fisica" class="content-section" style="display:none;">
+            <h2>Física</h2>
+            <p>Contenido de Física.</p>
+        </section>
+        <section id="especialidad" class="content-section" style="display:none;">
+            <h2>Especialidad</h2>
+            <p>Contenido de Especialidad.</p>
+        </section>
+        <section id="contacto" class="content-section" style="display:none;">
+            <h2>Contacto</h2>
+            <p>Información de contacto.</p>
+        </section>
+    </main>
+
+    <script src="C:\xampp\htdocs\Nueva carpeta\Proyecto_Final\public\princ.js"></script>
+</body>
+</html>
