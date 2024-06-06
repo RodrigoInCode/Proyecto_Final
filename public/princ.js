@@ -24,21 +24,34 @@ function showSection(sectionId) {
         selectedSection.style.display = 'block';
     }
 }
-
 // Función para actualizar el reloj
 function actualizarReloj() {
-    const reloj = document.getElementById('reloj');
     const ahora = new Date();
-    const opciones = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-    const fechaHora = ahora.toLocaleDateString('es-ES', opciones);
-    reloj.textContent = fechaHora;
+    const dia = ahora.getDate();
+    const mes = ahora.getMonth() + 1;
+    const anio = ahora.getFullYear();
+    const horas = ahora.getHours();
+    const minutos = ahora.getMinutes();
+    const segundos = ahora.getSeconds();
+
+    const reloj = document.getElementById('reloj');
+    reloj.innerHTML = `${dia}/${mes}/${anio} ${horas}:${minutos}:${segundos}`;
 }
 
 // Actualizar el reloj cada segundo
 setInterval(actualizarReloj, 1000);
 
-// Mostrar el reloj al cargar la página
-window.onload = function() {
-    actualizarReloj();
-    showSection('inicio');
+
+
+// Función para inicializar el mapa de Google Maps
+function initMap() {
+    const ubicacion = { lat: 19.2696887, lng: -99.6051749 }; // Ubicación seleccionada (por ejemplo, Ciudad de México)
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: ubicacion
+    });
+    const marker = new google.maps.Marker({
+        position: ubicacion,
+        map: map
+    });
 }

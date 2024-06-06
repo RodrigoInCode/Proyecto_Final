@@ -1,12 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #e0f2f1; /* Color de fondo verde claro */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color:#008f39;
+    background-color: #004d40; /* Verde oscuro */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -26,7 +29,7 @@ nav {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color:#0e813c;
+    background-color: #00796b; /* Verde medio */
 }
 
 .menu-item {
@@ -37,7 +40,7 @@ nav {
 }
 
 .menu-item:hover {
-    background-color: #003d80;
+    background-color: #004d40; /* Verde oscuro */
 }
 
 .submenu {
@@ -45,7 +48,7 @@ nav {
     position: absolute;
     top: 50px;
     left: 0;
-    background-color: #00a135;
+    background-color: #00796b; /* Verde medio */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -59,7 +62,7 @@ nav {
 }
 
 .submenu li:hover {
-    background-color: #003d80;
+    background-color: #004d40; /* Verde oscuro */
 }
 
 .menu-item:hover .submenu {
@@ -67,11 +70,13 @@ nav {
 }
 
 main {
+    flex: 1;
     padding: 20px;
     text-align: center;
 }
+
 footer {
-    background-color: #007BFF;
+    background-color: #004d40; /* Verde oscuro */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -86,6 +91,40 @@ footer {
 }
 
 .reloj {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    text-align: right;
+    margin: -100px 0;
+    color: #004d40; /* Verde oscuro */
+}
+
+.materias-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.materias-table th, .materias-table td {
+    border: 1px solid #004d40; /* Verde oscuro */
+    padding: 8px;
+    text-align: left;
+}
+
+.materias-table th {
+    background-color: #004d40; /* Verde oscuro */
+    color: white;
+}
+
+.materias-table td[contenteditable="true"] {
+    background-color: #e0f2f1; /* Verde claro para celdas editables */
+}
+
+.materias-table td[contenteditable="true"]:focus {
+    outline: 2px solid #00796b; /* Verde medio al enfocar */
+    background-color: #b2dfdb; /* Verde aún más claro cuando se edita */
+}
+
+.map {
+    width: 100%;
+    height: 400px;
     margin-top: 20px;
 }
