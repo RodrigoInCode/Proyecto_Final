@@ -70,3 +70,22 @@ main {
     padding: 20px;
     text-align: center;
 }
+footer {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.content-section {
+    display: none;
+}
+
+#inicio {
+    display: block;
+}
+
+.reloj {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
